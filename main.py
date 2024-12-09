@@ -4,6 +4,7 @@
 import pygame
 from constants import *
 from player import Player
+from shot import Shot
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
 
@@ -23,6 +24,10 @@ def main():
 
     AsteroidField.containers = (updatable)
     asteroid_field = AsteroidField()
+
+    shots = pygame.sprite.Group()
+
+    Shot.containers = (shots, updatable, drawable)
 
 
     # GAME LOOP
